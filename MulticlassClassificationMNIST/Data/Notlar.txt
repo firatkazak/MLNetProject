@@ -1,0 +1,56 @@
+﻿Bu projede, MNIST veri kümesini kullanarak ML.NET'in 0'dan 9'a kadar el yazısıyla yazılmış rakamları nasıl sınıflandıracağını öğrendik. 
+Bu, bir SDCA (Stokastik Çift Koordinat Yükselişi) algoritmasını kullanarak çözeceğimiz çok sınıflı bir sınıflandırma problemidir.
+
+MNIST veri seti, 0 ile 9 arasında değişen rakamların el yazısıyla yazılmış resimlerini içerir.
+
+Kullandığımız MNIST veri seti 65 sütun sayı içerir. Her satırdaki ilk 64 sütun, 0 ile 16 aralığındaki tam sayı değerleridir. Bu değerler, 32 x 32 bit eşlemlerinin 4 x 4'lük örtüşmeyen bloklara bölünmesiyle hesaplanır. Bu blokların her birinde AÇIK piksel sayısı sayılır ve bu da 8 x 8'lik bir giriş matrisi oluşturur. Her satırdaki son sütun, ilk 64 sütundaki değerlerle temsil edilen sayıdır. Bu ilk 64 sütun bizim özelliklerimizdir ve ML modelimiz bu özellikleri test görüntülerini sınıflandırmak için kullanacaktır. Eğitim ve doğrulama veri setlerimizdeki son sütun, ML modelimizi kullanarak tahmin edeceğimiz gerçek sayı olan etikettir.
+
+Oluşturacağımız ML modeli, yukarıda açıklandığı gibi, belirli bir görüntünün 0 ile 9 arasındaki sayılardan biri olma olasılıklarını döndürecektir.
+
+=============== Training the model ===============
+===== Evaluating Model's accuracy with Test data =====
+************************************************************
+*    Metrics for Microsoft.ML.Trainers.SdcaMaximumEntropyMulticlassTrainer multi-class classification model
+*-----------------------------------------------------------
+    AccuracyMacro = 0,9532, a value between 0 and 1, the closer to 1, the better
+    AccuracyMicro = 0,9533, a value between 0 and 1, the closer to 1, the better
+    LogLoss = 0,1857, the closer to 0, the better
+    LogLoss for class 1 = 0,0821, the closer to 0, the better
+    LogLoss for class 2 = 0,0419, the closer to 0, the better
+    LogLoss for class 3 = 0,1575, the closer to 0, the better
+************************************************************
+The model is saved to C:\Users\firat\source\repos\MLDersleri\MulticlassClassificationMNIST\MLModels/Model.zip
+Actual: 1     Predicted probability:       zero:  0
+                                           One :  1
+                                           two:   0
+                                           three: 0
+                                           four:  0
+                                           five:  0
+                                           six:   0
+                                           seven: 0
+                                           eight: 0
+                                           nine:  0
+
+Actual: 7     Predicted probability:       zero:  0
+                                           One :  0
+                                           two:   0
+                                           three: 0
+                                           four:  0
+                                           five:  0
+                                           six:   0
+                                           seven: 1
+                                           eight: 0
+                                           nine:  0
+
+Actual: 9     Predicted probability:       zero:  0
+                                           One :  0,231
+                                           two:   0,0008
+                                           three: 0,003
+                                           four:  0
+                                           five:  0,1972
+                                           six:   0
+                                           seven: 0
+                                           eight: 0
+                                           nine:  0,5679
+
+Hit any key to finish the app

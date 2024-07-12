@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "DeepLearningImageClassification": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "TF_ENABLE_ONEDNN_OPTS": "0"
+      }
+    }
+  }
+}

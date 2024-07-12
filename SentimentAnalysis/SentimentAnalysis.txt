@@ -1,0 +1,82 @@
+﻿###Çıktı###
+
+************************************************************
+*       Metrics for Microsoft.ML.Trainers.SdcaLogisticRegressionBinaryTrainer binary classification model
+*-----------------------------------------------------------
+*       Accuracy: %94,88
+*       Area Under Curve:      %94,24
+*       Area under Precision recall Curve:  %77,88
+*       F1Score:  %65,43
+*       LogLoss:  ,21
+*       LogLossReduction:  ,53
+*       PositivePrecision:  ,9
+*       PositiveRecall:  ,52
+*       NegativePrecision:  ,95
+*       NegativeRecall:  %99,38
+************************************************************
+
+Bu çıktıda, modelin performansını değerlendirmek ve tek bir tahmin sonucunu incelemek için önemli bilgiler yer alıyor.
+
+###Çıktının Açıklaması###
+
+### Model Performans Metrikleri
+
+Bu metrikler, modelin ne kadar iyi performans gösterdiğini ve doğru tahminlerde bulunduğunu anlamak için kullanılır:
+
+1. Accuracy (%94.88);
+   Doğruluk oranı, modelin tüm tahminlerinin ne kadarının doğru olduğunu gösterir.
+   %94.88, modelin tahminlerinin %94.88'inin doğru olduğu anlamına gelir.
+
+2. Area Under Curve (AUC) (%94.24)**:
+   ROC eğrisinin altında kalan alanı gösterir. Modelin sınıflandırma yeteneğini ölçer.
+   %94.24, modelin iyi bir sınıflandırıcı olduğunu ve yüksek performans gösterdiğini belirtir.
+
+3. Area under Precision Recall Curve (%77.88);
+   Precision-Recall eğrisinin altında kalan alanı gösterir. Özellikle dengesiz veri setlerinde önemlidir.
+   %77.88, modelin iyi bir performans sergilediğini ancak mükemmel olmadığını gösterir.
+
+4. F1Score (%65.43);
+   Precision ve Recall'ün harmonik ortalaması. Modelin hem hassasiyetini hem de duyarlılığını ölçer.
+   %65.43, modelin genel performansının iyi olduğunu fakat bazı iyileştirmelere açık olduğunu gösterir.
+
+5. LogLoss (0.21);
+   Modelin tahminlerinin ne kadar iyi olduğunu ölçer. Düşük değerler daha iyi performans gösterir.
+   0.21, modelin oldukça iyi performans gösterdiğini belirtir.
+
+6. LogLossReduction (0.53);
+   LogLoss'un azaltılma miktarını gösterir. Yüksek değerler daha iyi performansı işaret eder.
+   0.53, modelin baz modelden daha iyi performans gösterdiğini gösterir.
+
+7. PositivePrecision (0.9);
+   Pozitif tahminlerin ne kadarının doğru olduğunu gösterir.
+   0.9, modelin pozitif sınıfı iyi bir şekilde tahmin ettiğini belirtir.
+
+8. PositiveRecall (0.52);
+   Gerçek pozitiflerin ne kadarının doğru tahmin edildiğini gösterir.
+   0.52, modelin pozitif sınıfı tanımada bazı eksiklikler olduğunu gösterir.
+
+9. NegativePrecision (0.95);
+   Negatif tahminlerin ne kadarının doğru olduğunu gösterir.
+   0.95, modelin negatif sınıfı oldukça iyi tahmin ettiğini gösterir.
+
+10. NegativeRecall (%99.38);
+    Gerçek negatiflerin ne kadarının doğru tahmin edildiğini gösterir.
+    %99.38, modelin negatif sınıfı tanımada neredeyse mükemmel olduğunu gösterir.
+
+Tekli Tahmin Sonucu;
+Text: I love this movie! | Prediction: Non Toxic sentiment | Probability of being toxic: 0.09466019
+Bu kısımda, modelin yeni bir metin üzerindeki tahmin sonucu yer alıyor;
+
+Text: I love this movie!: Analiz edilen metin.
+Prediction: Non Toxic sentiment: Modelin tahmini, bu metnin toksik olmadığı yönünde.
+Probability of being toxic: 0.09466019: Bu metnin toksik olma olasılığı %9.47 olarak tahmin edilmiş.
+
+Çıktılardan Ne Öğrenmelisiniz?
+
+1. Model Performansı: Modelinizin genel olarak oldukça iyi performans gösterdiğini ancak pozitif sınıfı tanımada bazı eksiklikleri olduğunu görebilirsiniz. NegativePrecision ve NegativeRecall değerleri oldukça yüksekken, PositiveRecall değeri nispeten daha düşük.
+
+2. Tahmin Doğruluğu: Model, "I love this movie!" ifadesini toksik olmayan olarak doğru bir şekilde tahmin etmiş ve bu tahmine oldukça düşük bir toksik olasılığı (%9.47) vermiş. Bu da modelin metni doğru sınıflandırma eğiliminde olduğunu gösterir.
+
+3. İyileştirme Alanları: PositiveRecall değerinin düşük olması, modelin pozitif sınıfı (toksik) tanımada zorluk çektiğini gösterir. Bu alanda iyileştirmeler yaparak modelin dengesini artırabilirsiniz.
+
+Bu metrikler ve tahmin sonucunu analiz ederek modelinizin güçlü ve zayıf yönlerini anlayabilir ve gerektiğinde iyileştirmeler yapabilirsiniz.

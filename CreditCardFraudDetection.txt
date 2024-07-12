@@ -1,0 +1,59 @@
+Adýmlar;
+
+CCFraudDetection.Common: Projedeki Ortak veri modellerini içerir.
+
+1. Adým: DataModels Klasöründe önce TransactionObservation sonra TransactionFraudPrediction adýnda 2 Class tanýmladýk.
+TransactionObservation: Her bir kredi kartý iþlemini ve onun özelliklerini temsil eder. Bu veri yapýsý, modelin eðitimi ve tahmin yapabilmesi için kullanýlýr.
+TransactionFraudPrediction: Modelin bir iþlemi tahmin ederken ürettiði sonuçlarý (etiket, skor, olasýlýk) temsil eder. Tahmin sonuçlarýný saklamak ve konsola yazdýrmak için kullanýlýr.
+2. Adým: Projede LocalConsoleHelper adýnda bir Class tanýmladýk.
+LocalConsoleHelper: Yardýmcý konsol metodu.
+
+CCFraudDetection.Trainer: Modeli eðitmek ve deðerlendirmek için bir konsol uygulamasýdýr.
+Program.cs: Bütün kodlar ve açýklamalarý orada.
+
+CCFraudDetection.Predictor: Eðitilen modeli kullanarak yeni veriler üzerinde tahminler yapmak için bir konsol uygulamasýdýr.
+Program.cs: Bütün kodlar ve açýklamalarý orada.
+
+ÇIKTI AÇIKLAMASI;
+
+Tabii, verileri detaylý olarak inceleyelim:
+
+### Trainer Uygulamasý Çýktýsý:
+
+1. **Peek data in DataView: Showing 2 rows with the columns**
+    - Ýlk iki satýrýn özelliklerini ve etiketlerini gösterir. Her bir satýrda `V1` ile `V28` arasýnda deðiþen özellikler, `Amount` (Tutar), `Label` (Etiket), `Features` (Özellikler) ve `NormalizedFeatures` (Normalleþtirilmiþ Özellikler) bulunmaktadýr.
+
+2. **Peek data in DataView: Show 2 rows with just the 'NormalizedFeatures' column**
+    - Normalleþtirilmiþ özellikler sütununu içeren ilk iki satýrý gösterir. Normalleþtirilmiþ özellikler, özellik deðerlerinin belirli bir ölçekte normalize edilmiþ versiyonlarýdýr.
+
+3. **Training Model**
+    - Modelin eðitim sürecinin baþladýðýný ve devam ettiðini belirtir.
+
+4. **End of training process**
+    - Model eðitiminin tamamlandýðýný ve eðitim sonrasý iþlemlerin baþladýðýný belirtir.
+
+5. **Evaluating Model's accuracy with Test data**
+    - Eðitilmiþ modelin test verileri üzerindeki baþarý metriklerini gösterir.
+
+6. **Saved model**
+    - Eðitilmiþ modelin belirtilen dizine kaydedildiðini gösterir.
+
+### Predictor Uygulamasý Çýktýsý:
+
+1. **Predictions from saved model**
+
+   **Test 5 transactions, that should be predicted as fraud (true):**
+   - Modelin sahtekarlýk olarak tahmin ettiði 5 iþlemi gösterir. Her iþlemde gerçek etiket (`Label`), özellikler (`Features`) ve modelin tahmin ettiði etiket (`Predicted Label`) ile skorunu içerir.
+
+   **Test 5 transactions, that should NOT be predicted as fraud (false):**
+   - Modelin sahtekarlýk olarak tahmin etmediði 5 iþlemi gösterir. Yine her iþlemde gerçek etiket (`Label`), özellikler (`Features`) ve modelin tahmin ettiði etiket (`Predicted Label`) ile skorunu içerir.
+
+   - Her bir iþlem için modelin tahmin ettiði skor, iþlemin belirli bir sýnýfa (sahtekarlýk veya sahtekarlýk deðil) ait olma olasýlýðýný temsil eder.
+
+### Analiz:
+
+- **Trainer Uygulamasý:** Veri setinin ilk iki satýrýný ve bu satýrlarýn özelliklerini, normalleþtirilmiþ özelliklerini, ve etiketlerini gösterir. Model eðitim sürecini baþlatýr, tamamlar ve sonrasýnda modelin performansýný test verileri üzerinde deðerlendirir. Son olarak eðitilmiþ modeli bir dosyaya kaydeder.
+
+- **Predictor Uygulamasý:** Eðitilmiþ modelin kaydedilmiþ halinden yüklenerek, gerçek veri üzerinde nasýl performans gösterdiðini gösterir. Belirli iþlemlerin sahtekarlýk olup olmadýðýný tahmin eder ve bu tahminleri gerçek etiketlerle karþýlaþtýrarak doðruluðunu deðerlendirir.
+
+Her iki uygulama da, sahtekarlýk tespiti yapmak için makine öðrenimi tekniklerini kullanýr. Trainer uygulamasý modeli eðitir ve deðerlendirirken, Predictor uygulamasý gerçek veri üzerinde modelin uygulamada nasýl performans gösterebileceðini simüle eder.

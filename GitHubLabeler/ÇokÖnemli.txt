@@ -1,0 +1,10 @@
+﻿{
+  "GitHubToken": "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",
+  "GitHubRepoOwner": "firatkazak",
+  "GitHubRepoName": "MLDersleri"
+}
+//37223807
+//firatkazak
+
+Appsettings.json dosyasını C:\Users\firat\source\repos\MLDersleri\GitHubLabeler\bin\Debug\net8.0 içinde arıyordu, ben de dosyayı kesip buraya yapıştırdım.
+Arayacaksan bu konumda ara.

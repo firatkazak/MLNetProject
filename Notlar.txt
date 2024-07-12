@@ -1,0 +1,39 @@
+Tek Projede çalýþanlar Console uygulamasý olarak duruyor. 2 veya daha fazla projede çalýþanlar Klasör içinde.
+Common bir Class Library. Ortak kullanýlan Class'larý ve bütün paketleri buna yükledim, tekrar yüklememek için.
+SciSharp.TensorFlow.Redist 2.3.1 paketini GÜNCELLEME.Çünkü hata veriyor. Sadece bu sürümde çalýþýyor.
+
+01 - SentimentAnalysis: Duygu Analizi Projesi. - Notlar Alýndý.
+02 - SpamDetection - Binary Classification ile Spam Tespiti Projesi. - Notlar Alýndý.
+03 - CreditCardFraudDetection: Binary Classification ile Kredi Kartý Dolandýrýcýlýðý Tespiti Projesi. - Notlar Alýndý.
+04 - HeartDiseaseDetection: Binary Classification ile Kalp Hastalýðý Tespiti Projesi. - Notlar Alýndý.
+05 - GitHubLabeler: ML.NET API'lerinin nasýl kullanýlacaðýný göstermek için basit bir prototip uygulamasý. - Notlar Alýndý.
+06 - MulticlassClassificationIris: Bir iris çiçeðinin türünü tahmin etmeye yarayan bir Multiclass classification projesi. - Notlar Alýndý.
+07 - MulticlassClassificationMNIST: El Yazýsý Tahmini. Notlarý aldým. Hiçbir þey ANLAMADIM! :@
+08 - ProductRecommender: Matrix Factorization yöntemi ile ürün önerisi projesi. - Notlar Alýndý.
+09 - MovieRecommendation: Matrix Factorization yöntemi ile film önerisi projesi. - Notlar Alýndý.
+10 - Recommendation-MovieRecommender: 1, 2 HATA VERÝYOR. HALLET!
+11 - TaxiFarePrediction: Regression yöntemi ile Taksi Ücreti Tahmini Projesi. - Notlar Alýndý.
+12 - Forecasting-Sales: Regression. YAPILMADI.
+13 - BikeSharingDemand: Regression yöntemi ile bisiklet talebini tahmin etme Projesi. - Notlar Alýndý.
+14 - Forecasting-Sales: Time Series. YAPILMADI.
+15 - SpikeDetection: Ürün satýþlarýndaki ani artýþlarý ve deðiþim noktalarýný tespit etmek için TimeSeries Anomaly Detection Projesi. - Notlar Alýndý.
+16 - PowerAnomalyDetection: Akýllý elektrik sayacýndan alýnan günlük okumalara dayalý olarak güç tüketimindeki ani artýþlarý bulan anormallikleri tespit Projesi. - Notlar Alýndý.
+17 - AnomalyDetectionCreditCardFraudDetection: Anomaly(outlier) detection ile kredi kartý dolandýrýcýlýðý tespiti projesi. - Notlar Alýndý.
+18 - ClusteringCustomerSegmentation: Benzer profile sahip müþteri gruplarýný belirlemek için Clustering(Kümeleme) Projesi. - Notlar Alýndý.
+19 - ClusteringIris: Clustering(Kümeleme) yöntemi ile iris çiçeklerini farklý iris türlerine karþýlýk gelen farklý gruplara ayýrma Projesi. - Notlar Alýndý.
+20 - WebRanking: Ranking yöntemi ile arama motoru sonuçlarýný görüntülemek için en iyi sýrayý tahmin etme Projesi. - Notlar Alýndý.
+21 - DeepLearningImageClassificationTraining: Kendi özel Image Classification modelimizi oluþturduðumuz Proje. Henüz Yapmadým. !!!!!!!!!!!!!!! UNUTMA !!!!!!!!!!!!!
+22 - ImageClassification.TensorFlow: TensorFlow ile Image Classification yaparak görüntüleri sýnýflandýran Proje. - Notlar Alýndý.
+23 - TensorFlowEstimator: Deep learning ve LbfgsMaximumEntropy tekniði ile Image classification Projesi. - Notlar Alýndý.
+24 - ObjectDetection: Verilen resimden nesne algýlama yani Object detection Projesi. - Notlar Alýndý.
+25 - ScalableMLModelOnWebAPI-IntegrationPkg: YAPILMADI.
+26 - BinaryClassification_Sentiment_Razor: YAPILMADI.
+27 - ScalableMLModelOnAzureFunction: YAPILMADI.
+28 - ScalableSentimentAnalysisBlazorWebApp: YAPILMADI.
+29 - LargeDatasets:
+30 - DatabaseLoader:
+31 - DatabaseIntegration:
+32 - Model-Explainability: YAPILMADI
+33 - ONNXExport: bir regresyon modelini eðitip, bu modeli ONNX biçimine dönüþtürdüðümüz Proje. Notlar Alýndý.
+
+https://github.com/dotnet/machinelearning-samples

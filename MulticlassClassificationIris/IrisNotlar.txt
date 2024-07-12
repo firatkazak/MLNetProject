@@ -1,0 +1,4 @@
+﻿Multiclass classification Iris Projesi;
+
+Bir iris çiçeğinin türünü (setosa, versicolor veya virginica) çiçeğin taç yaprağı uzunluğu, taç yaprağı genişliği gibi parametrelerine dayanarak tahmin etmeye odaklanılmıştır.
+
